@@ -8,26 +8,26 @@ namespace CapitalizeProgetto
         static void Main(string[] args)
         {
             Console.WriteLine("Give me the address of the file where to apply capitalize.");
-            string indirizzo = Console.ReadLine();
+            string adress = Console.ReadLine();
 
-            string testoFile = LeggiIlFile(indirizzo);
+            string fileText = LeggiIlFile(adress);
 
-            if (testoFile == null)
+            if (fileText == null)
             {
                 return;
             }
             Console.WriteLine("Do you want a New File or do you want to Overwrite the previous one?");
             Console.WriteLine("Select N for new and S for overwrite");
-            string sceltaNuovo = Console.ReadLine();
+            string newChoice = Console.ReadLine();
 
             Console.WriteLine("If you want to capitalize all letters press T"
                                       + Environment.NewLine
                                       + "if instead you want to capitalize the letters after the dot press P");
             string sceltaPunto = Console.ReadLine();
 
-            string testoMaiuscolo = Capitalize(testoFile, sceltaPunto);
+            string testoMaiuscolo = Capitalize(fileText, sceltaPunto);
 
-            ScriviIlFile(testoMaiuscolo, indirizzo, sceltaNuovo);
+            ScriviIlFile(testoMaiuscolo, adress, newChoice);
 
         }
         private static string Capitalize(string testoFile, string sceltaPunto)
