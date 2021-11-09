@@ -7,7 +7,7 @@ namespace CapitalizeProgetto
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Dammi l'indirizzo del file dove applicare capitalize");
+            Console.WriteLine("Give me the address of the file where to apply capitalize.");
             string indirizzo = Console.ReadLine();
 
             string testoFile = LeggiIlFile(indirizzo);
@@ -16,13 +16,13 @@ namespace CapitalizeProgetto
             {
                 return;
             }
-            Console.WriteLine("Vuoi un Nuovo file o vuoi Sovrascrivere il precedente?");
-            Console.WriteLine("Seleziona N per nuovo e S per sovrascrivere");
+            Console.WriteLine("Do you want a New File or do you want to Overwrite the previous one?");
+            Console.WriteLine("Select N for new and S for overwrite");
             string sceltaNuovo = Console.ReadLine();
 
-            Console.WriteLine("Se vuoi rendere maiusole tutte le lettere premi T"
+            Console.WriteLine("If you want to capitalize all letters press T"
                                       + Environment.NewLine
-                                      + "se invece vuoi rendere maiuscole le lettere dopo il punto premi P");
+                                      + "if instead you want to capitalize the letters after the dot press P");
             string sceltaPunto = Console.ReadLine();
 
             string testoMaiuscolo = Capitalize(testoFile, sceltaPunto);
@@ -78,13 +78,13 @@ namespace CapitalizeProgetto
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("File non accessibile");
+                    Console.WriteLine("Not accessible file");
                     return null;
                 }
             }
             else
             {
-                Console.WriteLine("Il file non esiste");
+                Console.WriteLine("File doesn't exist");
                 return null;
             }
         }
@@ -102,7 +102,7 @@ namespace CapitalizeProgetto
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Impossibile Salvare");
+                    Console.WriteLine("Unable to save");
                 }
 
             }
@@ -115,7 +115,7 @@ namespace CapitalizeProgetto
                 catch (Exception)
                 {
 
-                    Console.WriteLine("Impossibile Salvare");
+                    Console.WriteLine("Unable to save");
                 }
 
             }
